@@ -20,8 +20,9 @@ class HomePage extends StatelessWidget {
 //                    height: 2,
 //                  ),
 
-// Icons
                   ListTile(
+
+// Icons
                     leading: IconButton(
                       icon: Icon(
                         Icons.notifications,
@@ -38,7 +39,22 @@ class HomePage extends StatelessWidget {
                       onPressed: () {},
                       iconSize: 20,
                     ),
+
+// Logo
+                    title: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 25,
+                        ),
+                        SizedBox(
+                          height: 80,
+                          child: Image.asset("assets/logo.png"),
+                        ),
+                      ],
+                    ),
+
                   ),
+//                  Image.asset("assets/logo.png"),
                 ],
               ),
             ),
