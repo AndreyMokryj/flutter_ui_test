@@ -117,9 +117,8 @@ class HomePage extends StatelessWidget {
               ],
             ),
 
-// Another elements
+// 3 text captions
             Row(
-//               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Expanded(
                   child: ListTile(
@@ -170,8 +169,6 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-
-
                 ),
               ],
             ),
