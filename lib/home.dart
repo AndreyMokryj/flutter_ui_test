@@ -50,7 +50,6 @@ class HomePage extends StatelessWidget {
                       ),
 
                     ),
-//                  Image.asset("assets/logo.png"),
                   ],
                 ),
               ),
@@ -119,7 +118,63 @@ class HomePage extends StatelessWidget {
             ),
 
 // Another elements
-            ListTile(title: Text("biugeiurg"),),
+            Row(
+//               crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: ListTile(
+                    title: Text(
+                      "col1",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    trailing: SizedBox(
+                      child: VerticalDivider(
+                        width: 1,
+                        color: Colors.black,
+                      ),
+                      height: 10,
+                    ),
+                  ),
+                  flex: 1,
+                ),
+                Expanded(
+                  child: ListTile(
+                    title: Text(
+                      "col2",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    trailing: SizedBox(
+                      child: VerticalDivider(
+                        width: 1,
+                        color: Colors.black,
+                      ),
+                      height: 10,
+                    ),
+                  ),
+                  flex: 1,
+                ),
+                Expanded(
+                  child: ListTile(
+                    title: Text(
+                      "col3",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+
+
+                ),
+              ],
+            ),
           ],
         ),
 
