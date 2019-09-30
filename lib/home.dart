@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_test/helpers.dart';
 
 class HomePage extends StatelessWidget {
+  final buttonHeight = 125.0;
 
   @override
   Widget build(BuildContext context) {
@@ -173,28 +174,39 @@ class HomePage extends StatelessWidget {
               ],
             ),
 
-// Dog pictures zone
             Container(
-//              height: 300,
               color: Colors.black12,
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
+
+// Buttons
                     Row(
                       children: <Widget>[
                         Expanded(
                           child: SizedBox(
-                            height: 150,
+                            height: buttonHeight,
                           ),
                           flex: 1,
                         ),
                         Expanded(
                           flex: 6,
                           child: Container(
-                            color: Colors.white,
-                            height: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10),
+                              ),
+                              color: Colors.white,
+                            ),
+                            //color: Colors.white,
+                            height: buttonHeight,
                             child: FlatButton(
-                              child: Text("Button 1"),
+                              padding: EdgeInsets.all(10),
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Text('Botton 1'),
+                              ),
                               onPressed: () async{
                                 await confirmDialog(
                                     context,
@@ -207,17 +219,20 @@ class HomePage extends StatelessWidget {
                         ),
                         Expanded(
                           child: SizedBox(
-                            height: 150,
+                            height: buttonHeight,
                           ),
                           flex: 1,
                         ),
                         Expanded(
                           flex: 6,
                           child: Container(
-                            color: Colors.white,
-                            height: 150,
+                            height: buttonHeight,
                             child: FlatButton(
-                              child: Text("Button 2"),
+                              padding: EdgeInsets.all(10),
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Text('Botton 2'),
+                              ),
                               onPressed: () async{
                                 await confirmDialog(
                                     context,
@@ -226,21 +241,31 @@ class HomePage extends StatelessWidget {
                                 );
                               },
                             ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10),
+                              ),
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                         Expanded(
                           child: SizedBox(
-                            height: 150,
+                            height: buttonHeight,
                           ),
                           flex: 1,
                         ),
                         Expanded(
                           flex: 6,
                           child: Container(
-                            color: Colors.white,
-                            height: 150,
+                            height: buttonHeight,
                             child: FlatButton(
-                              child: Text("Button 3"),
+                              padding: EdgeInsets.all(10),
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Text('Botton 3'),
+                              ),
                               onPressed: () async{
                                 await confirmDialog(
                                     context,
@@ -249,21 +274,31 @@ class HomePage extends StatelessWidget {
                                 );
                               },
                             ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10),
+                              ),
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                         Expanded(
                           child: SizedBox(
-                            height: 150,
+                            height: buttonHeight,
                           ),
                           flex: 1,
                         ),
                         Expanded(
                           flex: 6,
                           child: Container(
-                            color: Colors.white,
-                            height: 150,
+                            height: buttonHeight,
                             child: FlatButton(
-                              child: Text("Button 4"),
+                              padding: EdgeInsets.all(10),
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Text('Botton 4'),
+                              ),
                               onPressed: () async{
                                 await confirmDialog(
                                     context,
@@ -272,11 +307,18 @@ class HomePage extends StatelessWidget {
                                 );
                               },
                             ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(10),
+                                bottomRight: Radius.circular(10),
+                              ),
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                         Expanded(
                           child: SizedBox(
-                            height: 150,
+                            height: buttonHeight,
                           ),
                           flex: 1,
                         ),
@@ -288,6 +330,11 @@ class HomePage extends StatelessWidget {
                     Divider(
                       color: Colors.green,
                       height: 1,
+                    ),
+
+// Dog pictures zone
+                    ListTile(
+                      trailing: Text("Dog pictures zone"),
                     ),
                     SizedBox(
                       height: 200,
