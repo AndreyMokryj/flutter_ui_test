@@ -172,6 +172,72 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
+
+// Dog pictures zone
+            Container(
+//              height: 300,
+              color: Colors.black12,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: SizedBox(
+                            height: 150,
+                            child: FlatButton(
+                              child: Container(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: SizedBox(
+                            height: 150,
+                            child: FlatButton(
+                              child: Container(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: SizedBox(
+                            height: 150,
+                            child: FlatButton(
+                              child: Container(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: SizedBox(
+                            height: 150,
+                            child: FlatButton(
+                              child: Container(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Divider(
+                      color: Colors.green,
+                      height: 1,
+                    ),
+                    SizedBox(
+                      height: 200,
+                    )
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
 
