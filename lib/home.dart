@@ -185,42 +185,100 @@ class HomePage extends StatelessWidget {
                         Expanded(
                           child: SizedBox(
                             height: 150,
+                          ),
+                          flex: 1,
+                        ),
+                        Expanded(
+                          flex: 6,
+                          child: Container(
+                            color: Colors.white,
+                            height: 150,
                             child: FlatButton(
-                              child: Container(
-                                color: Colors.white,
-                              ),
+                              child: Text("Button 1"),
+                              onPressed: () async{
+                                await confirmDialog(
+                                    context,
+                                    title: 'Button 1',
+                                    content: 'You\'ve pressed button 1'
+                                );
+                              },
                             ),
                           ),
                         ),
                         Expanded(
                           child: SizedBox(
                             height: 150,
+                          ),
+                          flex: 1,
+                        ),
+                        Expanded(
+                          flex: 6,
+                          child: Container(
+                            color: Colors.white,
+                            height: 150,
                             child: FlatButton(
-                              child: Container(
-                                color: Colors.white,
-                              ),
+                              child: Text("Button 2"),
+                              onPressed: () async{
+                                await confirmDialog(
+                                    context,
+                                    title: 'Button 2',
+                                    content: 'You\'ve pressed button 2'
+                                );
+                              },
                             ),
                           ),
                         ),
                         Expanded(
                           child: SizedBox(
                             height: 150,
+                          ),
+                          flex: 1,
+                        ),
+                        Expanded(
+                          flex: 6,
+                          child: Container(
+                            color: Colors.white,
+                            height: 150,
                             child: FlatButton(
-                              child: Container(
-                                color: Colors.white,
-                              ),
+                              child: Text("Button 3"),
+                              onPressed: () async{
+                                await confirmDialog(
+                                    context,
+                                    title: 'Button 3',
+                                    content: 'You\'ve pressed button 3'
+                                );
+                              },
                             ),
                           ),
                         ),
                         Expanded(
                           child: SizedBox(
                             height: 150,
+                          ),
+                          flex: 1,
+                        ),
+                        Expanded(
+                          flex: 6,
+                          child: Container(
+                            color: Colors.white,
+                            height: 150,
                             child: FlatButton(
-                              child: Container(
-                                color: Colors.white,
-                              ),
+                              child: Text("Button 4"),
+                              onPressed: () async{
+                                await confirmDialog(
+                                    context,
+                                    title: 'Button 4',
+                                    content: 'You\'ve pressed button 4'
+                                );
+                              },
                             ),
                           ),
+                        ),
+                        Expanded(
+                          child: SizedBox(
+                            height: 150,
+                          ),
+                          flex: 1,
                         ),
                       ],
                     ),
