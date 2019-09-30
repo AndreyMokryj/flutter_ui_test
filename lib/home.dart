@@ -130,13 +130,6 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.bold
                     ),
                   ),
-//                    trailing: SizedBox(
-//                      child: VerticalDivider(
-//                        width: 1,
-//                        color: Colors.black,
-//                      ),
-//                      height: 10,
-//                    ),
                 ),
                 flex: 10,
               ),
@@ -159,13 +152,6 @@ class HomePage extends StatelessWidget {
                       fontSize: 20,
                     ),
                   ),
-//                    trailing: SizedBox(
-//                      child: VerticalDivider(
-//                        width: 1,
-//                        color: Colors.black,
-//                      ),
-//                      height: 10,
-//                    ),
                 ),
                 flex: 10,
               ),
@@ -188,13 +174,6 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.bold
                     ),
                   ),
-//                    leading: SizedBox(
-//                      child: VerticalDivider(
-//                        width: 1,
-//                        color: Colors.black,
-//                      ),
-//                      height: 10,
-//                    ),
                 ),
               ),
             ],
@@ -372,79 +351,199 @@ class HomePage extends StatelessWidget {
         ],
       ),
 
-//      Navigation bar
-      bottomNavigationBar: BottomNavigationBar(
-//          type: BottomNavigationBarType.shifting,
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.grey,
-        currentIndex: 2,
-//          showSelectedLabels: false,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-//        selectedLabelStyle: TextStyle(
-//          decoration: TextDecoration.underline,
-//
-//        ),
-        backgroundColor: Colors.yellow,
-
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            title: Text(
-              "shopping",
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.pets),
-            title: Text(
-              "activities",
-            ),
-          ),
-
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Container(
-              height: 30,
-              child: Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Expanded(
-                      child: Container(
-                        height: 50,
-                        width: 80,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(25),
-                            topRight: Radius.circular(25),
-                          ),
-                          color: Colors.red,
-
+      bottomNavigationBar: BottomAppBar(
+//        shape: AutomaticNotchedShape(BeveledRectangleBorder(), StadiumBorder(),),
+        child: Container(
+          padding: EdgeInsets.all(1),
+          height: 60,
+          child: Row(
+            children: <Widget>[
+              //0
+              Expanded(
+                child: FlatButton(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Expanded(
+                        child: Icon(Icons.shopping_cart,
+                          size: 17,
+                          color: Colors.grey,
                         ),
-                      )
-                  )
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Expanded(
+                        child: Text(
+                          "shopping",
+                          style: TextStyle(
+                            fontSize: 10,
+                            color: Colors.grey
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
 
-                ],
+                    ],
+                  ),
+                  onPressed: () => _onTap(0, context),
+                ),
               ),
 
-            ),
-          ),
+              //1
+              Expanded(
+                child: FlatButton(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Expanded(
+                        child: Icon(Icons.pets,
+                          size: 17,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Expanded(
+                        child: Text(
+                          "activities",
+                          style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
 
-          BottomNavigationBarItem(
-            icon: Icon(Icons.refresh),
-            title: Text(
-              "protection",
-            ),
+                    ],
+                  ),
+                  onPressed: () => _onTap(1, context),
+                ),
+              ),
+
+              //2
+              Expanded(
+                child: FlatButton(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Expanded(
+                        child: Icon(Icons.home,
+                          size: 17,
+                          color: Colors.red,
+                        ),
+                      ),
+
+                      SizedBox(
+                        height: 35,
+                      ),
+                      Expanded(
+                          child: Container(
+                            height: 100,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(50),
+                                topRight: Radius.circular(50),
+                              ),
+                              color: Colors.red,
+
+                            ),
+                          )
+                      )
+
+
+                    ],
+                  ),
+                  onPressed: () => _onTap(2, context),
+                ),
+              ),
+
+              //3
+              Expanded(
+                child: FlatButton(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Expanded(
+                        child: Icon(Icons.radio_button_unchecked,
+                          size: 17,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Expanded(
+                        child: Text(
+                          "protection",
+                          style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+
+                    ],
+                  ),
+                  onPressed: () => _onTap(3, context),
+                ),
+              ),
+
+              //4
+              Expanded(
+                child: FlatButton(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Expanded(
+                        child: Icon(Icons.pets,
+                          size: 17,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Expanded(
+                        child: Text(
+                          "health",
+                          style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+
+                    ],
+                  ),
+                  onPressed: () => _onTap(4, context),
+                ),
+              ),
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.pets),
-            title: Text(
-              "healthcare",
-            ),
-          ),
-        ],
-        onTap: (index) => _onTap(index, context),
+        )
+
       ),
     );
   }
