@@ -12,7 +12,9 @@ class HomePage extends StatelessWidget {
 
       child: Scaffold(
         body: ListView(
-//          padding: EdgeInsets.all(2),
+          padding: EdgeInsets.only(
+            top: 20,
+          ),
           children: <Widget>[
 
 // Painter
