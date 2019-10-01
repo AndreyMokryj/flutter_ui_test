@@ -15,44 +15,41 @@ class HomePage extends StatelessWidget {
             painter: ShapesPainter(),
             child: SizedBox(
               height: 120,
-              child: ListView(
-                children: <Widget>[
-                  ListTile(
+              child: ListTile(
 
 // Icons
-                    leading: IconButton(
-                      icon: Icon(
-                        Icons.notifications,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
-                      iconSize: 20,
-                    ),
-                    trailing: IconButton(
-                      icon: Icon(
-                        Icons.menu,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {},
-                      iconSize: 20,
-                    ),
+                leading: IconButton(
+                  icon: Icon(
+                    Icons.notifications,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {},
+                  iconSize: 20,
+                ),
+                trailing: IconButton(
+                  icon: Icon(
+                    Icons.menu,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {},
+                  iconSize: 20,
+                ),
 
 // Logo
-                    title: Column(
-                      children: <Widget>[
-                        SizedBox(
-                          height: 25,
-                        ),
-                        SizedBox(
-                          height: 80,
-                          child: Image.asset("assets/logo.png"),
-                        ),
-                      ],
+                title: Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: 25,
                     ),
+                    SizedBox(
+                      height: 80,
+                      child: Image.asset("assets/logo.png"),
+                    ),
+                  ],
+                ),
 
-                  ),
-                ],
               ),
+
             ),
           ),
           Stack(
@@ -63,7 +60,7 @@ class HomePage extends StatelessWidget {
 // Contains SizedBox and Dog's avatar below
               SizedBox(
                 height: 100,
-                child: ListView(
+                child: Column(
                   children: <Widget>[
                     SizedBox(
                       height: 30,
@@ -342,7 +339,7 @@ class HomePage extends StatelessWidget {
                     trailing: Text("Dog pictures zone"),
                   ),
                   SizedBox(
-                    height: 200,
+                    height: 400,
                   )
                 ],
               ),
@@ -351,198 +348,199 @@ class HomePage extends StatelessWidget {
         ],
       ),
 
+// Bottom bar
       bottomNavigationBar: BottomAppBar(
 //        shape: AutomaticNotchedShape(BeveledRectangleBorder(), StadiumBorder(),),
-        child: Container(
-          padding: EdgeInsets.all(1),
-          height: 60,
-          child: Row(
-            children: <Widget>[
-              //0
-              Expanded(
-                child: FlatButton(
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Expanded(
-                        child: Icon(Icons.shopping_cart,
-                          size: 17,
-                          color: Colors.grey,
+          child: Container(
+            padding: EdgeInsets.all(1),
+            height: 70,
+            child: Row(
+              children: <Widget>[
+                //0
+                Expanded(
+                  child: FlatButton(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 15,
                         ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Expanded(
-                        child: Text(
-                          "shopping",
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: Colors.grey
+                        Expanded(
+                          child: Icon(Icons.shopping_cart,
+                            size: 25,
+                            color: Colors.grey,
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-
-                    ],
-                  ),
-                  onPressed: () => _onTap(0, context),
-                ),
-              ),
-
-              //1
-              Expanded(
-                child: FlatButton(
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Expanded(
-                        child: Icon(Icons.pets,
-                          size: 17,
-                          color: Colors.grey,
+                        SizedBox(
+                          height: 8,
                         ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Expanded(
-                        child: Text(
-                          "activities",
-                          style: TextStyle(
-                              fontSize: 10,
-                              color: Colors.grey
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-
-                    ],
-                  ),
-                  onPressed: () => _onTap(1, context),
-                ),
-              ),
-
-              //2
-              Expanded(
-                child: FlatButton(
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Expanded(
-                        child: Icon(Icons.home,
-                          size: 17,
-                          color: Colors.red,
-                        ),
-                      ),
-
-                      SizedBox(
-                        height: 35,
-                      ),
-                      Expanded(
-                          child: Container(
-                            height: 100,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(50),
-                                topRight: Radius.circular(50),
-                              ),
-                              color: Colors.red,
-
+                        Expanded(
+                          child: Text(
+                            "shopping",
+                            style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.grey
                             ),
-                          )
-                      )
-
-
-                    ],
-                  ),
-                  onPressed: () => _onTap(2, context),
-                ),
-              ),
-
-              //3
-              Expanded(
-                child: FlatButton(
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Expanded(
-                        child: Icon(Icons.radio_button_unchecked,
-                          size: 17,
-                          color: Colors.grey,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Expanded(
-                        child: Text(
-                          "protection",
-                          style: TextStyle(
-                              fontSize: 10,
-                              color: Colors.grey
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-
-                    ],
-                  ),
-                  onPressed: () => _onTap(3, context),
-                ),
-              ),
-
-              //4
-              Expanded(
-                child: FlatButton(
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Expanded(
-                        child: Icon(Icons.pets,
-                          size: 17,
-                          color: Colors.grey,
+                        SizedBox(
+                          height: 8,
                         ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Expanded(
-                        child: Text(
-                          "health",
-                          style: TextStyle(
-                              fontSize: 10,
-                              color: Colors.grey
+
+                      ],
+                    ),
+                    onPressed: () => _onTap(0, context),
+                  ),
+                ),
+
+                //1
+                Expanded(
+                  child: FlatButton(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Expanded(
+                          child: Icon(Icons.pets,
+                            size: 20,
+                            color: Colors.grey,
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Expanded(
+                          child: Text(
+                            "activities",
+                            style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.grey
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
 
-                    ],
+                      ],
+                    ),
+                    onPressed: () => _onTap(1, context),
                   ),
-                  onPressed: () => _onTap(4, context),
                 ),
-              ),
-            ],
-          ),
-        )
+
+                //2
+                Expanded(
+                  child: FlatButton(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Expanded(
+                          child: Icon(Icons.home,
+                            size: 20,
+                            color: Colors.red,
+                          ),
+                        ),
+
+                        SizedBox(
+                          height: 45,
+                        ),
+                        Expanded(
+                            child: Container(
+                              height: 200,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(50),
+                                  topRight: Radius.circular(50),
+                                ),
+                                color: Colors.red,
+
+                              ),
+                            )
+                        )
+
+
+                      ],
+                    ),
+                    onPressed: () => _onTap(2, context),
+                  ),
+                ),
+
+                //3
+                Expanded(
+                  child: FlatButton(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Expanded(
+                          child: Icon(Icons.radio_button_unchecked,
+                            size: 20,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Expanded(
+                          child: Text(
+                            "protection",
+                            style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.grey
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+
+                      ],
+                    ),
+                    onPressed: () => _onTap(3, context),
+                  ),
+                ),
+
+                //4
+                Expanded(
+                  child: FlatButton(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Expanded(
+                          child: Icon(Icons.pets,
+                            size: 20,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Expanded(
+                          child: Text(
+                            "health",
+                            style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.grey
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+
+                      ],
+                    ),
+                    onPressed: () => _onTap(4, context),
+                  ),
+                ),
+              ],
+            ),
+          )
 
       ),
     );
