@@ -13,15 +13,15 @@ class ShapesPainter extends CustomPainter {
     //canvas.drawCircle(center, 75.0, paint);
     canvas.drawOval(rect, paint);
 
-    paint.color = Colors.white;
-    rect = Rect.fromLTWH(0, -24, 2, size.height * 2);
-    canvas.drawRect(rect, paint);
-
-    rect = Rect.fromLTWH(size.width - 2, -24, 2, size.height * 2);
-    canvas.drawRect(rect, paint);
-
-    rect = Rect.fromLTWH(-0, 0, size.width, 2);
-    canvas.drawRect(rect, paint);
+//    paint.color = Colors.white;
+//    rect = Rect.fromLTWH(0, -24, 2, size.height * 2);
+//    canvas.drawRect(rect, paint);
+//
+//    rect = Rect.fromLTWH(size.width - 2, -24, 2, size.height * 2);
+//    canvas.drawRect(rect, paint);
+//
+//    rect = Rect.fromLTWH(-0, 0, size.width, 2);
+//    canvas.drawRect(rect, paint);
 
 
   }
