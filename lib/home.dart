@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
             CustomPaint(
               painter: ShapesPainter(),
               child: SizedBox(
-                height: 120,
+                height: 100,
                 child: ListTile(
 
 // Icons
@@ -50,9 +50,15 @@ class HomePage extends StatelessWidget {
                         height: 25,
                       ),
                       SizedBox(
-                        height: 80,
+                        height: 40,
                         child: Image.asset("assets/logo.png"),
                       ),
+                      Text(
+                        "הפרופיל שלי",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      )
                     ],
                   ),
 

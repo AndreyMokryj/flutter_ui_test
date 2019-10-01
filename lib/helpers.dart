@@ -7,7 +7,7 @@ class ShapesPainter extends CustomPainter {
     final paint = Paint();
     // set the color property of the paint
     paint.color = Colors.deepPurple;
-    var rect = Rect.fromLTWH(-size.width / 4, -size.height / 2, size.width * 1.5, size.height * 2);
+    var rect = Rect.fromLTWH(-size.width / 4, -size.height / 2, size.width * 1.5, size.height * 2.2);
     canvas.drawOval(rect, paint);
 
     rect = Rect.fromLTWH(-size.width / 4, -size.height / 2, size.width * 1.5, size.height);
